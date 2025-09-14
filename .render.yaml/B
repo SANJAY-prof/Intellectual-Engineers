@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: intellectual-engineers
+    env: python
+    plan: free
+    buildCommand: poetry install --no-root
+    startCommand: python app.py
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
